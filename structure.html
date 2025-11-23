@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkSphere – Gestion du Personnel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+
+    <!-- SECTION GAUCHE -->
+    <aside class="left-panel">
+        <h2>Unassigned Staff</h2>
+        <button class="add-worker-btn"><a href="#form_add">+ Add New Worker</a></button>
+        <ul class="worker-list"></ul>
+    </aside>
+
+   <!--image side-->
+    <main class="floor-map">
+
+        <!--salle de conférence-->
+        <div class="zone conference">
+            <span class="zone-title">Salle de conférence</span>
+            <button class="add-btn">+</button>
+        </div>
+
+        <!-- Réception -->
+        <div class="zone reception">
+            <span class="zone-title">Réception</span>
+            <button class="add-btn">+</button>
+        </div>
+
+
+        <!-- Salle des serveurs -->
+        <div class="zone servers">
+            <span class="zone-title">Salle des serveurs</span>
+            <button class="add-btn">+</button>
+        </div>
+
+         <!-- Salle de sécurité -->
+        <div class="zone security-room">
+            <span class="zone-title">Salle de sécurité</span>
+            <button class="add-btn">+</button>
+        </div>
+
+
+         <!-- Salle du personnel -->
+        <div class="zone staff-room">
+            <span class="zone-title">Salle du personnel</span>
+            <button class="add-btn">+</button>
+        </div>
+
+
+         <!-- Salle d'archives -->
+        <div class="zone archive">
+            <span class="zone-title">Salle d’archives</span>
+            <button class="add-btn">+</button>
+        </div>
+    </main>
+</div>
+ 
+<section class="formulaire">
+
+    <form  id="form_add">
+        <div class="info-personnel">
+            <h2>Personal Information</h2>
+            <h2 class="X"><a href="#">X</a></h2>
+
+            <label>Name</label>
+            <input id="worker-name" type="text" placeholder="Enter your name">
+
+            <label>Role</label><br>
+             <select id="worker-role">
+                <option value="Receptionist">Receptionist</option>
+                <option value="Manager">Manager</option>
+                <option value="Security">Security</option>
+                <option value="IT_guy">IT guy</option>
+                <option value="Cleaning">Cleaning</option>
+             </select><br>
+
+            <label>Profile Photo (URL)</label>
+            <input id="worker-photo" type="url" placeholder="Enter image source (URL)">
+            <div style="height: 150px;width: 150px;border-radius: 50%;"><img style="width: 100%; height: 100%;" alt="user_round_live" id="worker_round"></div>
+
+            <label>Email</label>
+            <input id="worker-email" type="email" placeholder="Enter your Email">
+
+            <label>Phone Number</label>
+            <input id="worker-number" type="number" placeholder="Enter your Phone Number">
+            <label >Experiences</label>
+            <div class="experiences">
+                <button class="add-experience" type="button">+</button>
+            </div>
+            <div class="experience-container">
+            </div>
+            <div class="zone-erreur"></div>
+            <button class="addWorker" id="addWorker" type="submit">Add worker</button>
+        </div>
+    </form>
+    </section>
+
+    <section class="details">
+        <div class="worker_details">    
+        </div>
+    </section>
+
+    <section>
+        <div class="choice_worker">
+            <ul class="choice_worker_list"></ul>    
+        </div>
+    </section>
+    <script src="interactif.js"></script>
+</body>
+</html>
